@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora Dental</title>
+
+    <link rel="icon" href="./img/logo.horadental.jpg">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    > <!-- La consigna pide utilizar Bootstrap -->
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <nav class="navbar navbar-expand-lg"> <!-- Barra de navegación responsive de Bootstrap -->
+            <div class="container">
+                <a class="marca" href="index.html">
+                    <span class="titulo-marca">Hora Dental</span>
+                    <span class="subtitulo-marca">Es tiempo de sonreír</span>
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button> <!-- Utilizando el icono de toggler de Bootstrap hago que el menú se despliegue en dispositivos móviles -->
+
+                <div class="collapse navbar-collapse" id="menuPrincipal"> <!-- Contenido del menú -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/productos.html">Servicios</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="presentacion">
+            <div class="container">
+                <div class="contenido-presentacion">
+                    <div class="texto-presentacion">
+                        <h1>Cuidamos tu sonrisa</h1>
+
+                        <p>
+                            En Hora Dental ofrecemos atención odontológica profesional,
+                            con tecnología moderna y un trato cercano para cada paciente.
+                        </p>
+
+                        <div class="botones-presentacion">
+                            <a href="./pages/contacto.html" class="btn btn-primary">
+                                Solicitar turno
+                            </a>
+
+                            <a href="./pages/productos.html" class="btn btn-outline-primary">
+                                Ver servicios
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="imagen-presentacion">
+                        <img src="./img/inicio.jpg" alt="Consultorio Hora Dental">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicios">
+            <div class="container">
+                <div class="titulo-seccion">
+                    <h2>Nuestros servicios</h2>
+
+                    <p>
+                        Tratamientos pensados para la salud, la estética y el bienestar.
+                    </p>
+                </div>
+
+                <div class="grilla-servicios"> <!-- Utilizo una grilla CSS para mostrar los servicios en tarjetas -->
+                    <article class="tarjeta-servicio">
+                        <img
+                            src="./img/servicio.1.jpg"
+                            alt="Ortodoncia"
+                            class="img-servicio"
+                        >
+
+                        <div class="contenido-tarjeta">
+                            <h3>Ortodoncia</h3>
+
+                            <p>
+                                Tratamientos para mejorar la alineación dental
+                                y lograr una sonrisa armónica.
+                            </p>
+
+                            <a
+                                href="./pages/productos.html"
+                                class="btn btn-outline-primary btn-sm"
+                            > 
+                                Más info
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-servicio">
+                        <img
+                            src="./img/servicio.2.jpg"
+                            alt="Endodoncia"
+                            class="img-servicio"
+                        >
+
+                        <div class="contenido-tarjeta">
+                            <h3>Endodoncia</h3>
+
+                            <p>
+                                Procedimientos especializados para aliviar
+                                el dolor y conservar piezas dentales.
+                            </p>
+
+                            <a
+                                href="./pages/productos.html"
+                                class="btn btn-outline-primary btn-sm"
+                            > 
+                                Más info
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-servicio">
+                        <img
+                            src="./img/odonto.hablando.jpg"
+                            alt="Limpieza dental"
+                            class="img-servicio"
+                        >
+
+                        <div class="contenido-tarjeta">
+                            <h3>Limpieza general</h3>
+
+                            <p>
+                                Control, prevención y limpieza profesional
+                                para mantener una buena salud bucal.
+                            </p>
+
+                            <a
+                                href="./pages/productos.html"
+                                class="btn btn-outline-primary btn-sm"
+                            > <!-- Botón que use para "más información" de la ortodoncia - endodoncia - limp. gral -->
+                                Más info
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto-inicio">
+            <div class="container">
+                <div class="contenido-contacto">
+                    <div class="texto-contacto">
+                        <h2>Contacto</h2>
+
+                        <p><strong>Teléfono:</strong> +54 2604 xxx xxx</p>
+                        <p><strong>Email:</strong> horadental@gmail.com</p>
+                        <p><strong>Dirección:</strong> Calle Patricias Mendocinas, Ciudad de Mendoza</p>
+                        <p><strong>Horarios:</strong> Lunes a Viernes de 8:00 a 18:00</p>
+                    </div>
+
+                    <div class="imagen-contacto">
+                        <img
+                            src="./img/maps.jpg"
+                            alt="Ubicación del consultorio"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="container">
+            <div class="contenido-pie">
+                <p>Seguinos en nuestras redes</p>
+
+                <div class="enlaces-pie">
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+                    <a href="https://wa.me/549299887744" target="_blank">WhatsApp</a>
+                    <a href="mailto:horadental@gmail.com">Email</a>
+                </div>
+
+                <p>© 2026 Hora Dental</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> <!-- Incluyo el bundle de Bootstrap para que funcione el menú responsive -->
+</body>
+</html>
+<!-- Dejo los comentarios en Index solamente, pero utilice las mismas herramientas en las demás páginas, quiero que se vea prolijo el codigo -->

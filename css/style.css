@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fcfbfe;
+    color: #4f4a5a;
+    line-height: 1.6;
+} /* Estilos generales para toda la página */
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+} 
+
+a {
+    text-decoration: none;
+} 
+
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e8e1f2;
+} 
+
+.marca {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+} /* Estilos para la marca en la barra de navegación, utilizando flexbox para poner el título y subtítulo uno debajo del otro */
+
+.titulo-marca {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #7a6699;
+} 
+
+.subtitulo-marca {
+    font-size: 0.9rem;
+    color: #7a7485;
+}
+
+.navbar-nav .nav-link {
+    color: #4f4a5a;
+    font-weight: 600;
+} /* Estilos para los enlaces de navegación*/
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #7a6699;
+} /* Estilos para los enlaces de navegación al pasar el mouse por encima o cuando están activos */
+
+.presentacion {
+    padding: 4rem 0;
+    background: linear-gradient(to right, #efe3fa, #d8f4f2);
+}
+
+.contenido-presentacion,
+.contenido-contacto {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+} /* Utilizo flexbox para alinear el texto y la imagen en la sección de presentación y contacto */
+
+.texto-presentacion,
+.imagen-presentacion,
+.texto-contacto,
+.imagen-contacto {
+    width: 50%;
+}  /* defino el espacio que ocupa cada parte en la sección de presentación y contacto */
+
+.texto-presentacion h1,
+.titulo-seccion h2,
+.texto-contacto h2,
+.contenido-tarjeta h3 {
+    color: #7a6699;
+}
+
+.texto-presentacion h1 {
+    margin-bottom: 1rem;
+}
+
+.texto-presentacion p {
+    margin-bottom: 1.5rem;
+}
+
+.botones-presentacion {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.imagen-presentacion img {
+    width: 70%;
+    margin: auto;
+}
+
+
+
+.servicios {
+    padding: 4rem 0;
+    background: #ffffff;
+}
+
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.titulo-seccion p {
+    color: #7a7485;
+}
+
+.grilla-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+} /* Utilizo una grilla CSS para mostrar los servicios en tarjetas, con 3 columnas y un espacio entre ellas */
+
+.tarjeta-servicio {
+    border: 1px solid #e8e1f2;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.tarjeta-servicio:nth-child(1) {
+    background: #efe3fa;
+} /* Utilizo el selector nth-child para darle un fondo diferente a cada tarjeta de servicio, creando un efecto visual más atractivo - lo saco de copilot */
+
+.tarjeta-servicio:nth-child(2) {
+    background: #d8f4f2;
+}
+
+.tarjeta-servicio:nth-child(3) {
+    background: #fde7f3;
+}
+
+.img-servicio {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.contenido-tarjeta {
+    padding: 1rem;
+    text-align: center;
+}
+
+.contenido-tarjeta p {
+    margin-bottom: 1rem;
+}
+
+.contacto-inicio {
+    padding: 4rem 0;
+    background: #f7f4fb;
+}
+
+.pie {
+    background: #ffffff;
+    border-top: 1px solid #e8e1f2;
+    padding: 2rem 0;
+}
+
+.contenido-pie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.enlaces-pie {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.enlaces-pie a {
+    color: #7a6699;
+    font-weight: 600;
+}
+
+.formulario-contacto {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .contenido-presentacion,
+    .contenido-contacto {
+        flex-direction: column;
+    }
+
+    .texto-presentacion,
+    .imagen-presentacion,
+    .texto-contacto,
+    .imagen-contacto {
+        width: 100%;
+    }
+
+    .imagen-presentacion img {
+        width: 100%;
+    }
+
+    .grilla-servicios {
+        grid-template-columns: 1fr;
+    }
+
+}
