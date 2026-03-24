@@ -1,0 +1,19 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.grilla-servicios {
+  .tarjeta-servicio {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .grilla-servicios {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

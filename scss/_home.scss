@@ -1,0 +1,219 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "extends" as *;
+
+/*RESET*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*BASE*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: v.$color-fondo-body;
+  color: v.$color-texto;
+  line-height: 1.6;
+}
+
+img {
+  @extend %imagen-base;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*HERO / PRESENTACIÓN*/
+
+.presentacion {
+  @extend %seccion-base;
+  background: v.$color-fondo-presentacion;
+}
+
+.contenido-presentacion,
+.contenido-contacto {
+  @include m.flex-center(flex-start, center);
+  gap: v.$espaciado-xxl;
+}
+
+.texto-presentacion,
+.imagen-presentacion,
+.texto-contacto,
+.imagen-contacto {
+  width: 50%;
+}
+
+/* TITULOS */
+
+.texto-presentacion h1,
+.titulo-seccion h2,
+.texto-contacto h2,
+.contenido-tarjeta h3 {
+  color: v.$color-principal;
+  font-weight: 700;
+}
+
+.texto-presentacion {
+  h1 {
+    margin-bottom: v.$espaciado-md;
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  p {
+    margin-bottom: v.$espaciado-lg;
+  }
+}
+
+.titulo-seccion h2,
+.texto-contacto h2 {
+  font-size: 2rem;
+}
+
+/* BOTONES HERO */
+
+.botones-presentacion {
+  display: flex;
+  gap: v.$espaciado-md;
+  flex-wrap: wrap;
+}
+
+/* IMAGEN HERO */
+
+.imagen-presentacion img {
+  width: 70%;
+  margin: auto;
+}
+
+/* SERVICIOS */
+
+.servicios {
+  @extend %seccion-base;
+  background: v.$color-blanco;
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: v.$espaciado-xl;
+
+  p {
+    color: v.$color-secundario;
+  }
+}
+
+.grilla-servicios {
+  @include m.grid-columns(repeat(3, 1fr), 1.5rem);
+}
+
+/* TARJETAS */
+
+.tarjeta-servicio {
+  border: 1px solid v.$color-borde;
+  border-radius: v.$radio-general;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:nth-child(1) {
+    background: v.$color-fondo-servicio-1;
+  }
+
+  &:nth-child(2) {
+    background: v.$color-fondo-servicio-2;
+  }
+
+  &:nth-child(3) {
+    background: v.$color-fondo-servicio-3;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.img-servicio {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.contenido-tarjeta {
+  padding: v.$espaciado-md;
+  text-align: center;
+  flex-grow: 1;
+
+  p {
+    margin-bottom: v.$espaciado-md;
+  }
+}
+
+/* CONTACTO */
+
+.contacto-inicio {
+  @extend %seccion-base;
+  background: v.$color-fondo-contacto;
+}
+
+.formulario-contacto {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .grilla-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contenido-presentacion,
+  .contenido-contacto {
+    gap: 1.5rem;
+  }
+
+  .imagen-presentacion img {
+    width: 85%;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .contenido-presentacion,
+  .contenido-contacto {
+    flex-direction: column;
+  }
+
+  .texto-presentacion,
+  .imagen-presentacion,
+  .texto-contacto,
+  .imagen-contacto {
+    width: 100%;
+  }
+
+  .imagen-presentacion img {
+    width: 100%;
+  }
+
+  .grilla-servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .texto-presentacion h1 {
+    font-size: 2rem;
+  }
+
+  .titulo-seccion h2,
+  .texto-contacto h2 {
+    font-size: 1.6rem;
+  }
+}

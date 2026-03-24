@@ -1,0 +1,35 @@
+@use "variables" as v;
+
+.navbar {
+  background: v.$color-blanco;
+  border-bottom: 1px solid v.$color-borde;
+}
+
+.marca {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.titulo-marca {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: v.$color-principal;
+}
+
+.subtitulo-marca {
+  font-size: 0.9rem;
+  color: v.$color-secundario;
+}
+
+.navbar-nav {
+  .nav-link {
+    color: v.$color-texto;
+    font-weight: 600;
+
+    &:hover,
+    &.active {
+      color: v.$color-principal;
+    }
+  }
+}

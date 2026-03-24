@@ -1,0 +1,31 @@
+@use "variables" as v;
+
+.texto-presentacion,
+.texto-contacto {
+  p {
+    max-width: 60ch;
+  }
+}
+
+.imagen-presentacion,
+.imagen-contacto {
+  img {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+  }
+
+  img:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 768px) {
+  .texto-presentacion,
+  .texto-contacto {
+    text-align: center;
+
+    p {
+      max-width: 100%;
+    }
+  }
+}

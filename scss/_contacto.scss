@@ -1,0 +1,50 @@
+@use "variables" as v;
+@use "extends" as *;
+
+.formulario-contacto {
+  form {
+    background: v.$color-blanco;
+    border: 1px solid v.$color-borde;
+    border-radius: v.$radio-general;
+    padding: 2rem;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .form-label {
+    color: v.$color-principal;
+    font-weight: 600;
+  }
+
+  .form-control {
+    border: 1px solid v.$color-borde;
+    border-radius: 10px;
+
+    &:focus {
+      border-color: v.$color-principal;
+      box-shadow: 0 0 0 0.2rem rgba(122, 102, 153, 0.2);
+    }
+  }
+
+  .btn {
+    @extend %boton-base;
+  }
+}
+
+.imagen-contacto {
+  img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .formulario-contacto {
+    form {
+      padding: 1.2rem;
+    }
+  }
+}

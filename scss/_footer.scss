@@ -1,0 +1,26 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.pie {
+  background: v.$color-blanco;
+  border-top: 1px solid v.$color-borde;
+  padding: 2rem 0;
+}
+
+.contenido-pie {
+  @include m.flex-center(flex-start, center);
+  flex-direction: column;
+  gap: v.$espaciado-sm;
+  text-align: center;
+}
+
+.enlaces-pie {
+  display: flex;
+  gap: v.$espaciado-md;
+  flex-wrap: wrap;
+
+  a {
+    color: v.$color-principal;
+    font-weight: 600;
+  }
+}

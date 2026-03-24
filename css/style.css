@@ -1,213 +1,363 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #fcfbfe;
-    color: #4f4a5a;
-    line-height: 1.6;
-} /* Estilos generales para toda la página */
-
+@charset "UTF-8";
+/* FLEX */
+/* GRID */
+/*PLACEHOLDERS / EXTENDS*/
 img {
-    width: 100%;
-    display: block;
-    border-radius: 16px;
-} 
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
 
-a {
-    text-decoration: none;
-} 
+.presentacion, .servicios, .contacto-inicio {
+  padding: 4rem 0;
+}
+
+.formulario-contacto .btn, .btn {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/*BOTONES*/
+.btn {
+  padding: 0.65rem 1.2rem;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: #7a6699;
+  border-color: #7a6699;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(122, 102, 153, 0.18);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: rgb(97.6, 81.6, 122.4);
+  border-color: rgb(97.6, 81.6, 122.4);
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(122, 102, 153, 0.22);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: #7a6699;
+  border-color: #7a6699;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+  background-color: #7a6699;
+  border-color: #7a6699;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(122, 102, 153, 0.18);
+}
 
 .navbar {
-    background: #ffffff;
-    border-bottom: 1px solid #e8e1f2;
-} 
+  background: #ffffff;
+  border-bottom: 1px solid #e8e1f2;
+}
 
 .marca {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-} /* Estilos para la marca en la barra de navegación, utilizando flexbox para poner el título y subtítulo uno debajo del otro */
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
 
 .titulo-marca {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #7a6699;
-} 
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #7a6699;
+}
 
 .subtitulo-marca {
-    font-size: 0.9rem;
-    color: #7a7485;
+  font-size: 0.9rem;
+  color: #7a7485;
 }
 
 .navbar-nav .nav-link {
-    color: #4f4a5a;
-    font-weight: 600;
-} /* Estilos para los enlaces de navegación*/
+  color: #4f4a5a;
+  font-weight: 600;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+  color: #7a6699;
+}
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #7a6699;
-} /* Estilos para los enlaces de navegación al pasar el mouse por encima o cuando están activos */
+.pie {
+  background: #ffffff;
+  border-top: 1px solid #e8e1f2;
+  padding: 2rem 0;
+}
 
+.contenido-pie {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.enlaces-pie {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.enlaces-pie a {
+  color: #7a6699;
+  font-weight: 600;
+}
+
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*BASE*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fcfbfe;
+  color: #4f4a5a;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*HERO / PRESENTACIÓN*/
 .presentacion {
-    padding: 4rem 0;
-    background: linear-gradient(to right, #efe3fa, #d8f4f2);
+  background: linear-gradient(to right, #efe3fa, #d8f4f2);
 }
 
 .contenido-presentacion,
 .contenido-contacto {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-} /* Utilizo flexbox para alinear el texto y la imagen en la sección de presentación y contacto */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5rem;
+}
 
 .texto-presentacion,
 .imagen-presentacion,
 .texto-contacto,
 .imagen-contacto {
-    width: 50%;
-}  /* defino el espacio que ocupa cada parte en la sección de presentación y contacto */
+  width: 50%;
+}
 
+/* TITULOS */
 .texto-presentacion h1,
 .titulo-seccion h2,
 .texto-contacto h2,
 .contenido-tarjeta h3 {
-    color: #7a6699;
+  color: #7a6699;
+  font-weight: 700;
 }
 
 .texto-presentacion h1 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  line-height: 1.2;
 }
-
 .texto-presentacion p {
-    margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
+.titulo-seccion h2,
+.texto-contacto h2 {
+  font-size: 2rem;
+}
+
+/* BOTONES HERO */
 .botones-presentacion {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
+/* IMAGEN HERO */
 .imagen-presentacion img {
-    width: 70%;
-    margin: auto;
+  width: 70%;
+  margin: auto;
 }
 
-
-
+/* SERVICIOS */
 .servicios {
-    padding: 4rem 0;
-    background: #ffffff;
+  background: #ffffff;
 }
-
 
 .titulo-seccion {
-    text-align: center;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
-
 .titulo-seccion p {
-    color: #7a7485;
+  color: #7a7485;
 }
 
 .grilla-servicios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-} /* Utilizo una grilla CSS para mostrar los servicios en tarjetas, con 3 columnas y un espacio entre ellas */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
 
+/* TARJETAS */
 .tarjeta-servicio {
-    border: 1px solid #e8e1f2;
-    border-radius: 16px;
-    overflow: hidden;
+  border: 1px solid #e8e1f2;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .tarjeta-servicio:nth-child(1) {
-    background: #efe3fa;
-} /* Utilizo el selector nth-child para darle un fondo diferente a cada tarjeta de servicio, creando un efecto visual más atractivo - lo saco de copilot */
-
-.tarjeta-servicio:nth-child(2) {
-    background: #d8f4f2;
+  background: #efe3fa;
 }
-
+.tarjeta-servicio:nth-child(2) {
+  background: #d8f4f2;
+}
 .tarjeta-servicio:nth-child(3) {
-    background: #fde7f3;
+  background: #fde7f3;
+}
+.tarjeta-servicio:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .img-servicio {
-    height: 400px;
-    object-fit: cover;
-    border-radius: 0;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .contenido-tarjeta {
-    padding: 1rem;
-    text-align: center;
+  padding: 1rem;
+  text-align: center;
+  flex-grow: 1;
 }
-
 .contenido-tarjeta p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
+/* CONTACTO */
 .contacto-inicio {
-    padding: 4rem 0;
-    background: #f7f4fb;
-}
-
-.pie {
-    background: #ffffff;
-    border-top: 1px solid #e8e1f2;
-    padding: 2rem 0;
-}
-
-.contenido-pie {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    text-align: center;
-}
-
-.enlaces-pie {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.enlaces-pie a {
-    color: #7a6699;
-    font-weight: 600;
+  background: #f7f4fb;
 }
 
 .formulario-contacto {
-    max-width: 700px;
-    margin: 0 auto;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+/* Tablet */
+@media (max-width: 992px) {
+  .grilla-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contenido-presentacion,
+  .contenido-contacto {
+    gap: 1.5rem;
+  }
+  .imagen-presentacion img {
+    width: 85%;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .contenido-presentacion,
+  .contenido-contacto {
+    flex-direction: column;
+  }
+  .texto-presentacion,
+  .imagen-presentacion,
+  .texto-contacto,
+  .imagen-contacto {
+    width: 100%;
+  }
+  .imagen-presentacion img {
+    width: 100%;
+  }
+  .grilla-servicios {
+    grid-template-columns: 1fr;
+  }
+  .texto-presentacion h1 {
+    font-size: 2rem;
+  }
+  .titulo-seccion h2,
+  .texto-contacto h2 {
+    font-size: 1.6rem;
+  }
+}
+.grilla-servicios .tarjeta-servicio {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.grilla-servicios .tarjeta-servicio:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 769px) {
+  .grilla-servicios {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.texto-presentacion p,
+.texto-contacto p {
+  max-width: 60ch;
+}
+
+.imagen-presentacion img,
+.imagen-contacto img {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+.imagen-presentacion img:hover,
+.imagen-contacto img:hover {
+  transform: scale(1.02);
 }
 
 @media (max-width: 768px) {
-    .contenido-presentacion,
-    .contenido-contacto {
-        flex-direction: column;
-    }
-
-    .texto-presentacion,
-    .imagen-presentacion,
-    .texto-contacto,
-    .imagen-contacto {
-        width: 100%;
-    }
-
-    .imagen-presentacion img {
-        width: 100%;
-    }
-
-    .grilla-servicios {
-        grid-template-columns: 1fr;
-    }
-
+  .texto-presentacion,
+  .texto-contacto {
+    text-align: center;
+  }
+  .texto-presentacion p,
+  .texto-contacto p {
+    max-width: 100%;
+  }
 }
+.formulario-contacto form {
+  background: #ffffff;
+  border: 1px solid #e8e1f2;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+.formulario-contacto .form-label {
+  color: #7a6699;
+  font-weight: 600;
+}
+.formulario-contacto .form-control {
+  border: 1px solid #e8e1f2;
+  border-radius: 10px;
+}
+.formulario-contacto .form-control:focus {
+  border-color: #7a6699;
+  box-shadow: 0 0 0 0.2rem rgba(122, 102, 153, 0.2);
+}
+.imagen-contacto img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.imagen-contacto img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+  .formulario-contacto form {
+    padding: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
